@@ -8,6 +8,10 @@
 
 using namespace std;
 
+/*
+*Decripcion: Funcion mergesort
+*/
+
 
 void merge(vector<int> &v, int izquierda, int medio, int derecha){
 
@@ -67,6 +71,13 @@ void mergerSort(int izquierda, int derecha, vector<int> &v){
 	}
 }
 
+/*
+*Decripcion: Funcion que verifica si es posible acomodar los elementos en cierta porcion del arreglo
+*Parametros: v: vector<int> -> vector;
+			 medio: int -> mitad del vector
+			 n: int -> tamaño de la matriz;
+			 k: int -> numero de elementos a ordenar
+*/
 
 bool esPosible(int medio, vector<int> &v, int n, int k){
 	int pos = v[0], elementos = 1;
@@ -82,6 +93,13 @@ bool esPosible(int medio, vector<int> &v, int n, int k){
 
 	return false;
 }
+
+/*
+*Decripcion: Calcula la minima distancia
+*Parametros: v: vector<int> -> vector
+			 n: int -> tamaño de la matriz;
+			 k: int -> numero de elementos a ordenar
+*/
 
 int minimaDistancia(vector<int> &v, int n, int k){
 	int res = -1, izquierda = 1, derecha = v[n-1];
